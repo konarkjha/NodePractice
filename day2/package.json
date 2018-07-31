@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  
   "author": "",
   "license": "ISC",
   "scripts": {
@@ -13,7 +12,8 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "express-myconnection": "1.0.4",
+    "jade": "*",
     "mysql": "^2.16.0",
-    "jade": "*"
+    "siege": "^0.2.0"
   }
 }
