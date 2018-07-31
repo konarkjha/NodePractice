@@ -11,10 +11,11 @@ var users = require('./routes/users');
 // DataBase 
 var mysql = require("mysql");
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "konarkjha"
+  host: 'localhost',
+  port:3306,
+  user: 'root',
+  password: '',
+  database: 'konarkjha'
 });
 con.connect(function(err){
   if(err){
@@ -29,6 +30,7 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));

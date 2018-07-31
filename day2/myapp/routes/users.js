@@ -9,7 +9,7 @@ var url = require('url');
 router.get('/', function(req, res, next) {
 	var db = req.con;
 	var data = "";
-	db.query('SELECT * FROM user',function(err,rows){
+	db.query('SELECT * FROM employee',function(err,rows){
 		//if(err) throw err;
 		
 		// console.log('Data received from Db:\n');

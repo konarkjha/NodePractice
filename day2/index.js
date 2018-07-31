@@ -20,14 +20,19 @@ mysqlConnection.connect((err)=>{
 
 app.listen(3000,()=>console.log('Express server is running at port no : 3000'));
 
-app.get('/employee',async function(res,req){
+app.get('/employee', function f1(res,req){
     console.log('hello there');
     mysqlConnection.query('SELECT * from Employee',(err,rows)=>{
-      //  console.log(res);
-        if(!err)
+      
+        if(!err){
         console.log(rows);
-        else 
+        // console.log('second');
+        // console.log(rows);
+    }
+        else {
         console.log(err);
+        }
+        return(rows);
         
        
     })
