@@ -13,7 +13,7 @@ server.use(restify.plugins.throttle({
   rate: 50,
   ip: true,
   overrides: {
-    '192.168.1.1': {
+    'localhost': {
       rate: 0,        // unlimited
       burst: 0
     }
