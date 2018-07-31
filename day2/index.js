@@ -9,26 +9,26 @@ var mysqlConnection = mysql.createConnection({
     password:'',
     database:'konarkjha'
 });
-
+console.log(URL);
 mysqlConnection.connect((err)=>{
     if(!err)
     console.log('DB Connection Successfull!!');
     else 
     console.log('DB Connection Failed \n Error: '+ JSON.stringify(err,undefined,2));
-
+    console.log(err);
 });
-
+console.log(mysqlConnection);
 app.listen(3000,()=>console.log('Express server is running at port no : 3000'));
 
-app.get('/employees',(res,req)=>{
+app.get('/employee',(res,req)=>{
     mysqlConnection.query('SELECT * from Employee',(err,rows,fields)=>{
+        console.log(res);
         if(!err)
-        console.log('rows');
+        console.log(rows);
         else 
         console.log(err);
         
        
     })
-    clearTimeout(app);
+    
 });
-clearTimeout(app);
