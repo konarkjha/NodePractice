@@ -29,9 +29,8 @@ app.get('/employee', function f1(req,res){
             str=(rows);
         console.log(str);
         return(str);
-     // res.sendFile('C:\Users\Dell\Desktop\NodePractice\day2\run.html');
-        //console.log(rows);
-        
+
+    
     }
         else {
         console.log(err);
