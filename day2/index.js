@@ -1,6 +1,7 @@
 const mysql = require('mysql');
 const express = require('express');
 var app = express();
+var str ='';
 const bodyparse = require('body-parser');
 app.use(bodyparse.json());
 var mysqlConnection = mysql.createConnection({
@@ -20,19 +21,22 @@ mysqlConnection.connect((err)=>{
 
 app.listen(3000,()=>console.log('Express server is running at port no : 3000'));
 
-app.get('/employee', function f1(res,req){
+app.get('/employee', function f1(req,res){
     console.log('hello there');
     mysqlConnection.query('SELECT * from Employee',(err,rows)=>{
       
         if(!err){
-        console.log(rows);
-        // console.log('second');
-        // console.log(rows);
+            str=(rows);
+        console.log(str);
+        return(str);
+     // res.sendFile('C:\Users\Dell\Desktop\NodePractice\day2\run.html');
+        //console.log(rows);
+        
     }
         else {
         console.log(err);
         }
-        return(rows);
+       
         
        
     })
