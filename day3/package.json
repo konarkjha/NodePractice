@@ -1,0 +1,22 @@
+{
+  "name": "day3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "insert.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cryptr": "^4.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.14.0",
+    "mysql": "^2.13.0",
+    "nodemon": "^1.18.3",
+    "passport": "^0.4.0",
+    "request": "^2.87.0"
+  }
+}
