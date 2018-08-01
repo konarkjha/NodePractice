@@ -1,6 +1,10 @@
-// var Cryptr = require('cryptr');
-// var express=require('express');
+var Cryptr = require('cryptr');
+var request = require("request");
+var express=require('express');
+var app=express();
+
 var connection = require('./../config');
+
 
 module.exports.register=function(req,res){
     var today = new Date();
